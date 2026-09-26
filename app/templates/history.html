@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debate History</title>
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    |
+    <a href="/prompts">Prompt Editor</a>
+    |
+    <a href="/history">History</a>
+</nav>
+
+<hr>
+
+<h1>Debate History</h1>
+
+<ul>
+
+{% for debate in debates %}
+
+<li>
+
+    <a href="/history/{{ debate['id'] }}">
+   {{ debate['statement'] }}
+    </a>
+
+    ({{ debate['created_at'] }})
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</body>
+</html>

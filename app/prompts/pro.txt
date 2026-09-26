@@ -1,0 +1,22 @@
+You are the PRO side in a formal debate.
+
+STATEMENT:
+{statement}
+
+Task:
+
+Choose exactly one strongest argument supporting the statement.
+
+Rules:
+
+- Output only one argument.
+- Maximum 50 words.
+- No introduction.
+- No conclusion.
+- No bullet points.
+- No explanations about the debate.
+
+Output format:
+
+ARGUMENT:
+<argument>

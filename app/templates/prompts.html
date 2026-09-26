@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prompt Editor</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        |
+        <a href="/prompts">Prompt Editor</a>
+    </nav>
+
+    <hr>
+
+    <h1>Prompt Editor</h1>
+
+    {% if saved %}
+    <p style="color:green;">
+        Prompts saved successfully.
+    </p>
+    {% endif %}
+
+    <form method="post" action="/prompts">
+
+        <h2>PRO Prompt</h2>
+
+        <textarea
+            name="pro"
+            rows="15"
+            cols="120">{{ pro }}</textarea>
+
+        <br><br>
+
+        <h2>CON Prompt</h2>
+
+        <textarea
+            name="con"
+            rows="15"
+            cols="120">{{ con }}</textarea>
+
+        <br><br>
+
+        <h2>ARBITER Prompt</h2>
+
+        <textarea
+            name="arbiter"
+            rows="15"
+            cols="120">{{ arbiter }}</textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Save Prompts
+        </button>
+
+    </form>
+
+</body>
+</html>

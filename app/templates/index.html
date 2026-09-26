@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Debate Platform</title>
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    |
+    <a href="/prompts">Prompt Editor</a>
+    |
+    <a href="/history">History</a>
+</nav>
+
+<hr>
+
+<h1>AI Debate Platform</h1>
+
+<form action="/debate" method="post">
+
+    <label for="question">
+        Enter your statement:
+    </label>
+
+    <br><br>
+
+    <textarea
+        id="question"
+        name="question"
+        rows="5"
+        cols="60"
+        required></textarea>
+
+    <br><br>
+
+    <button type="submit">
+        Start Debate
+    </button>
+
+</form>
+
+</body>
+</html>
