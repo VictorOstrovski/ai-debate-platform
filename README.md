@@ -1,6 +1,6 @@
 # AI Debate Platform
 
-#### Video Demo: <YOUTUBE_URL_HERE>
+#### Video Demo: <https://youtu.be/ZVUF8TCtZdA?si=3_8cFVfLSmmE_4ej>
 
 #### Description:
 
