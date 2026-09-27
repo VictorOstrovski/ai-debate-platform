@@ -1,12 +1,15 @@
 from ollama import chat
 
 
-def ask_model(prompt: str) -> str:
+def ask_model(
+    prompt: str,
+    model: str = "qwen2.5:1.5b"
+) -> str:
 
     try:
 
         response = chat(
-            model="qwen2.5:1.5b",
+            model=model,
             messages=[
                 {
                     "role": "user",

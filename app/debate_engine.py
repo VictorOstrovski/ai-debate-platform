@@ -18,9 +18,15 @@ def run_debate(statement: str):
         statement=statement
     )
 
-    pro = ask_model(pro_prompt)
+    pro = ask_model(
+        pro_prompt,
+        model="qwen2.5:1.5b"
+    )
 
-    con = ask_model(con_prompt)
+    con = ask_model(
+        con_prompt,
+        model="qwen2.5:1.5b"
+    )
 
     arbiter_prompt = arbiter_template.format(
         statement=statement,
@@ -28,7 +34,10 @@ def run_debate(statement: str):
         con=con[:1000]
     )
 
-    arbiter = ask_model(arbiter_prompt)
+    arbiter = ask_model(
+        arbiter_prompt,
+        model="qwen2.5:1.5b"
+    )
 
     pro_match = re.search(
         r"PRO SCORE:\s*(\d+)",
@@ -42,10 +51,20 @@ def run_debate(statement: str):
         re.IGNORECASE
     )
 
+    winner_match = re.search(
+        r"WINNER:\s*(PRO|CON)",
+        arbiter,
+        re.IGNORECASE
+    )
+
     pro_score = int(pro_match.group(1)) if pro_match else 0
     con_score = int(con_match.group(1)) if con_match else 0
 
-    winner = "PRO" if pro_score >= con_score else "CON"
+    winner = (
+        winner_match.group(1).upper()
+        if winner_match
+        else ("PRO" if pro_score >= con_score else "CON")
+    )
 
     return {
         "pro": pro,
