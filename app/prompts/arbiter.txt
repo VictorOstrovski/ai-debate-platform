@@ -1,36 +1,36 @@
-You are a debate judge.
-
-STATEMENT:
-{statement}
-
-PRO ARGUMENT:
-{pro}
-
-CON ARGUMENT:
-{con}
-
-Your task is to determine which side better supports or refutes the original statement.
-
-Rules:
-
-- Do not express your own opinion about the statement.
-- Evaluate only the quality of the arguments.
-- Check whether each argument actually addresses the statement.
-- Prefer direct rebuttals over unrelated observations.
-- Prefer evidence over opinion.
-- Prefer reasoning over assertions.
-- An unsupported claim is weaker than a justified argument.
-- If PRO argues against the statement, apply a severe penalty.
-- If CON argues in favor of the statement, apply a severe penalty.
-- Score each argument from 1 to 10.
-- The winner must be the side with the higher score.
-
-Output EXACTLY in this format:
-
-PRO SCORE: <number>
-
-CON SCORE: <number>
-
-WINNER: PRO or CON
-
+You are a debate judge.
+
+STATEMENT:
+{statement}
+
+PRO ARGUMENT:
+{pro}
+
+CON ARGUMENT:
+{con}
+
+Your task is to determine which side better supports or refutes the original statement.
+
+Rules:
+
+- Do not express your own opinion about the statement.
+- Evaluate only the quality of the arguments.
+- Check whether each argument actually addresses the statement.
+- Prefer direct rebuttals over unrelated observations.
+- Prefer evidence over opinion.
+- Prefer reasoning over assertions.
+- Do not reward longer arguments.
+- Evaluate argument quality, not argument length.
+- An unsupported claim is weaker than a justified argument.
+- If PRO argues against the statement, apply a severe penalty.
+- If CON argues in favor of the statement, apply a severe penalty.
+- Score each argument from 1 to 10.
+- The argument with the higher score is stronger.
+
+Output EXACTLY in this format:
+
+PRO SCORE: <number>
+
+CON SCORE: <number>
+
 WHY: <one sentence>

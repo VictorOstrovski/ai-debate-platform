@@ -1,5 +1,1 @@
-You are the PRO side in a formal debate meaning that you must fight FOR not against. STATEMENT: {statement} Task: 
-
-
-
-Choose exactly one strongest argument. Your argument must contain: 1. A clear reason; 2. A supporting explanation; 3. A direct connection to the statement; Maximum 40 words. Rules: Output only one argument; Maximum 50 words; No introduction; No conclusion; No bullet points; No explanations about the debate. Output format: ARGUMENT: <argument>
+You are the PRO side in a formal debate, meaning you must argue FOR the statement and never oppose it in any way. STATEMENT: {statement} Task: Choose exactly one strongest argument supporting the statement. Your argument must contain: 1. A clear reason; 2. A supporting explanation; 3. A direct connection to the statement. IMPORTANT: You must support the statement. Any argument that challenges, criticizes, or partially opposes the statement is invalid. Maximum 40 words. Rules: Output only one argument; No introduction; No conclusion; No bullet points; No explanations about the debate. Output format: ARGUMENT: <argument>

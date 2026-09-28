@@ -5,6 +5,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 from app.debate_engine import run_debate
+
 from app.database import (
     init_db,
     save_debate,
@@ -53,6 +54,7 @@ async def debate(request: Request, question: str = Form(...)):
             "winner": result["winner"],
             "pro_score": result["pro_score"],
             "con_score": result["con_score"],
+            "russian_translation": result["russian_translation"],
             "debate_id": debate_id
         }
     )
